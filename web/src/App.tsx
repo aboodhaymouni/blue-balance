@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from 'react'
 import { clsx } from 'clsx'
-import { AudioLines, Cpu, Droplet, Info, Lock, LockOpen, ServerOff, Wifi, WifiOff } from 'lucide-react'
+import { AudioLines, Cpu, Info, Lock, LockOpen, ServerOff, Wifi, WifiOff } from 'lucide-react'
 import { api } from './api'
 import { useEgress, useOnline, usePoll } from './hooks'
 import type { Health } from './types'
@@ -11,11 +11,14 @@ import Citizen from './pages/Citizen'
 import Ops from './pages/Ops'
 import Public from './pages/Public'
 import Privacy from './pages/Privacy'
+import Story from './pages/Story'
+import Logo from './components/Logo'
 
-type Route = 'citizen' | 'ops' | 'public' | 'privacy'
+type Route = 'story' | 'citizen' | 'ops' | 'public' | 'privacy'
 
 const ROUTES: { route: Route; hash: string; label: string }[] = [
-  { route: 'citizen', hash: '#/', label: 'المواطن' },
+  { route: 'story', hash: '#/', label: 'الفكرة' },
+  { route: 'citizen', hash: '#/report', label: 'المواطن' },
   { route: 'ops', hash: '#/ops', label: 'غرفة التحكم' },
   { route: 'public', hash: '#/public', label: 'اللوحة العامة' },
   { route: 'privacy', hash: '#/privacy', label: 'الخصوصية' },
@@ -29,7 +32,8 @@ function parseHash(hash: string): Route {
   if (path === '/ops') return 'ops'
   if (path === '/public') return 'public'
   if (path === '/privacy') return 'privacy'
-  return 'citizen'
+  if (path === '/report') return 'citizen'
+  return 'story'
 }
 
 function useHashRoute(): Route {
@@ -152,10 +156,8 @@ export default function App() {
       <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
           <a href="#/" className="flex items-center gap-2.5">
-            <span className="grid size-9 place-items-center rounded-xl bg-brand text-white">
-              <Droplet className="size-5 fill-current" aria-hidden />
-            </span>
-            <span className="text-lg font-bold leading-tight">Blue Balance · بلو بالانس</span>
+            <Logo />
+            <span className="font-display text-lg font-bold leading-tight text-ink">Blue Balance · بلو بالانس</span>
           </a>
 
           <nav aria-label="الصفحات" className="order-last -mx-4 flex w-[calc(100%+2rem)] gap-1 overflow-x-auto px-4 lg:order-none lg:mx-0 lg:w-auto lg:px-0">
@@ -210,6 +212,7 @@ export default function App() {
         <div hidden={route !== 'citizen'}>
           <Citizen net={net.data} active={route === 'citizen'} />
         </div>
+        {route === 'story' && <Story />}
         {route === 'ops' && <Ops net={net.data} />}
         {route === 'public' && <Public />}
         {route === 'privacy' && <Privacy />}

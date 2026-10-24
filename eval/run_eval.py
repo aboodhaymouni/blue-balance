@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from api import config  # noqa: E402
-from api.extract import BOOLEAN_FIELDS, call_llm, check_evidence, fill_gaps, rules_extract  # noqa: E402
+from api.extract import BOOLEAN_FIELDS, call_hosted, call_llm, check_evidence, fill_gaps, rules_extract  # noqa: E402
 from api.pii import mask  # noqa: E402
 from api.places import Gazetteer  # noqa: E402
 
@@ -36,7 +36,7 @@ def gold(label: dict, field: str):
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--set", default="test", choices=["dev", "test"])
-    parser.add_argument("--engine", default="llm", choices=["llm", "rules"])
+    parser.add_argument("--engine", default="llm", choices=["llm", "hosted", "rules"])
     parser.add_argument("--no-fill", action="store_true", help="score the model alone, without the rules filling dropped issues")
     args = parser.parse_args()
 
@@ -49,10 +49,10 @@ def main() -> None:
     for it in items:
         text, label = it["text"], it["label"]
         started = time.perf_counter()
-        raw = call_llm(text) if args.engine == "llm" else rules_extract(text)
+        raw = {"llm": call_llm, "hosted": call_hosted, "rules": rules_extract}[args.engine](text)
         latencies.append(time.perf_counter() - started)
         fields, dropped, pii = check_evidence(text, raw)
-        if args.engine == "llm" and not args.no_fill:
+        if args.engine != "rules" and not args.no_fill:
             fill_gaps(text, fields)
         masked, _ = mask(text, pii, keep=gazetteer.normalised_aliases)
         totals["dropped"] += len(dropped)
@@ -81,7 +81,7 @@ def main() -> None:
 
     summary = {
         "set": args.set, "n": len(items),
-        "engine": "rules" if args.engine == "rules" else config.LLM_MODEL + ("" if args.no_fill else " + rules fill"),
+        "engine": "rules" if args.engine == "rules" else (config.HOSTED_MODEL if args.engine == "hosted" else config.LLM_MODEL) + ("" if args.no_fill else " + rules fill"),
         "issue_accuracy": f"{totals['issue_correct']}/{len(items)}",
         "stated_values_correct": f"{totals['stated_correct']}/{totals['stated']}",
         "invented_fields": totals["invented"], "wrong_values": totals["wrong"], "quotes_dropped": totals["dropped"],
@@ -89,7 +89,7 @@ def main() -> None:
         "pii_masked": f"{totals['pii_masked']}/{totals['pii_total']}",
         "latency_median_s": round(statistics.median(latencies), 2), "latency_max_s": round(max(latencies), 2),
     }
-    suffix = "-alone" if args.engine == "llm" and args.no_fill else ""
+    suffix = "-alone" if args.engine != "rules" and args.no_fill else ""
     out = ROOT / "eval" / "results" / f"{args.set}-{args.engine}{suffix}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({"summary": summary, "rows": rows}, ensure_ascii=False, indent=1), encoding="utf-8")

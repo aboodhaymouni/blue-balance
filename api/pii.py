@@ -32,7 +32,8 @@ def mask(text: str, model_spans: list[str], keep: list[str] = ()) -> tuple[str, 
     for span in model_spans:
         span = span.strip()
         # Only spans that really occur, are not places, and are not tiny fragments that would blank out ordinary words.
-        if len(span) >= 2 and find_quote(text, span) and span not in pairs and not is_place(span):
+        already_masked = any(label in span for label in LABELS.values())
+        if len(span) >= 2 and find_quote(text, span) and span not in pairs and not is_place(span) and not already_masked:
             pairs[span] = LABELS["phone"] if re.search(_D + "{6,}", span) else LABELS["name"]
     applied = sorted(pairs.items(), key=lambda kv: -len(kv[0]))
     masked = text

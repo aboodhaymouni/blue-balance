@@ -2,26 +2,42 @@
 @import "tailwindcss" source(".");
 
 /*
-  Blue Balance: calm and readable on a projector.
-  White/slate surfaces, one blue accent (#1d4ed8) for water and action, red only for faults.
+  Blue Balance — "Water Ledger".
+  A public ledger, not a map: cool mineral surfaces, deep ink, one water blue for water and action,
+  amber for the supply schedule (turns), red only for faults. Headlines in Alexandria (geometric Kufi),
+  body in IBM Plex Sans Arabic, numbers in IBM Plex Mono so they line up like a ledger.
 */
 
 @theme {
   --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "IBM Plex Sans Arabic", monospace;
+  --font-display: "Alexandria Variable", "IBM Plex Sans Arabic", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, "IBM Plex Sans Arabic", monospace;
 
-  --color-brand: #1d4ed8;
-  --color-brand-soft: #dbeafe;
-  --color-brand-ink: #1e3a8a;
-  --color-fault: #dc2626;
-  --color-fault-soft: #fee2e2;
+  --color-ink: #0b2230;
+  --color-ink-2: #163847;
+  --color-mist: #f3f6f7;
+  --color-line: #dde5e8;
+  --color-water: #0a6fd6;
+  --color-water-50: #edf5ff;
+  --color-water-100: #d6e8fd;
+  --color-water-300: #8cc3f7;
+  --color-water-700: #08529e;
+  --color-turn: #b86e00;
+  --color-turn-soft: #fdf1dc;
+
+  /* The app's existing names map onto the identity. */
+  --color-brand: #0a6fd6;
+  --color-brand-soft: #d6e8fd;
+  --color-brand-ink: #08529e;
+  --color-fault: #d92d20;
+  --color-fault-soft: #fde8e6;
 }
 
 @layer base {
   html {
     /* 17px base: every rem in the UI scales with it, so the projector stays readable. */
     font-size: 17px;
-    background: #f8fafc;
+    background: #f3f6f7;
     color-scheme: light;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -30,8 +46,8 @@
 
   body {
     margin: 0;
-    background: #f8fafc;
-    color: #0f172a;
+    background: #f3f6f7;
+    color: #0b2230;
     font-family: var(--font-sans);
     line-height: 1.7;
   }
@@ -39,13 +55,14 @@
   :lang(ar) { letter-spacing: 0; }
 
   h1, h2, h3 { line-height: 1.35; text-wrap: balance; }
+  h1, h2 { font-family: var(--font-display); letter-spacing: -0.01em; }
   p { text-wrap: pretty; }
 
   button:not(:disabled), [role="button"]:not([aria-disabled="true"]) { cursor: pointer; }
   button:disabled { cursor: not-allowed; }
 
   :focus-visible {
-    outline: 3px solid #1d4ed8;
+    outline: 3px solid #0a6fd6;
     outline-offset: 2px;
     border-radius: 8px;
   }

@@ -50,6 +50,28 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(rules_extract("من امبارح ما في مي")["issue"]["value"], "no_water")
 
 
+class FallbackTests(unittest.TestCase):
+    def test_hosted_then_local_then_rules(self):
+        from unittest import mock
+
+        from api import extract as ex
+
+        def boom(_text):
+            raise RuntimeError("down")
+
+        ok = {"issue": {"value": "no_water", "quote": "ما في مي"}, "pii_spans": []}
+        with mock.patch.object(ex.config, "HOSTED_ON", True), mock.patch.object(ex.config, "AI_OFF", False), \
+                mock.patch.object(ex, "call_hosted", boom), mock.patch.object(ex, "call_llm", lambda _t: ok):
+            result = ex.extract("ما في مي")
+        self.assertEqual(result["engine"], ex.config.LLM_MODEL)
+        self.assertIn("down", result["error"])
+        with mock.patch.object(ex.config, "HOSTED_ON", True), mock.patch.object(ex.config, "AI_OFF", False), \
+                mock.patch.object(ex, "call_hosted", boom), mock.patch.object(ex, "call_llm", boom):
+            result = ex.extract("ما في مي")
+        self.assertEqual(result["engine"], "rules")
+        self.assertEqual(result["raw"]["issue"]["value"], "no_water")
+
+
 class PiiTests(unittest.TestCase):
     def test_numbers_and_names(self):
         text = "انا ابو محمد رقمي 0791234567 والسيارة 12-34567"
@@ -64,6 +86,10 @@ class PiiTests(unittest.TestCase):
         masked, _ = mask("انا ابو محمد ساكن جنب مسجد أبو درويش", [], keep=[normalise("مسجد أبو درويش")])
         self.assertNotIn("ابو محمد", masked)
         self.assertIn("أبو درويش", masked)
+
+    def test_placeholders_are_not_masked_again(self):
+        masked, _ = mask("انا [اسم] [هاتف]", ["[هاتف]", "[اسم]"])
+        self.assertEqual(masked, "انا [اسم] [هاتف]")
 
     def test_arabic_indic_phone(self):
         masked, _ = mask("اتصلوا ٠٧٩١٢٣٤٥٦٧", [])

@@ -15,6 +15,16 @@ LLM_NUM_CTX = int(os.environ.get("BB_NUM_CTX", "2048"))  # small context keeps t
 LLM_TIMEOUT_S = float(os.environ.get("BB_LLM_TIMEOUT", "90"))
 AI_OFF = os.environ.get("BB_AI", "").lower() == "off"
 
+# Optional: a larger open-weight model behind an OpenAI-compatible API (OpenRouter, Groq, Hugging Face router...).
+# Used first when a key is set; the local model above is the fallback. Personal data is masked on the laptop
+# before any text leaves it.
+HOSTED_API_KEY = os.environ.get("BB_LLM_API_KEY") or os.environ.get("OPENROUTER_API_KEY") or os.environ.get("GROQ_API_KEY")
+HOSTED_BASE_URL = os.environ.get("BB_LLM_BASE_URL") or (
+    "https://api.groq.com/openai/v1" if os.environ.get("GROQ_API_KEY") and not os.environ.get("OPENROUTER_API_KEY") else "https://openrouter.ai/api/v1"
+)
+HOSTED_MODEL = os.environ.get("BB_HOSTED_MODEL", "openai/gpt-oss-120b")  # Apache-2.0 open weights
+HOSTED_ON = bool(HOSTED_API_KEY) and os.environ.get("BB_HOSTED", "").lower() != "off"
+
 # Open-weight speech-to-text (faster-whisper). Falls back to CPU if CUDA cannot load.
 # large-v3-turbo needs about 1 GB of VRAM in int8_float16, so it fits beside qwen2.5:7b on an 8 GB card.
 WHISPER_MODEL = os.environ.get("BB_WHISPER", "mobiuslabsgmbh/faster-whisper-large-v3-turbo")

@@ -79,14 +79,20 @@ def _public(c: dict) -> dict:
 
 def process(text: str, channel: str, source: str, ts: datetime | None = None, cached: dict | None = None) -> dict:
     when = ts or now()
+    original = text
+    # Phones, national IDs, plates and kunyas are masked on the laptop before any model sees the text,
+    # so a hosted model never receives them. Replay outputs were recorded on the unmasked text.
     if cached is None:
+        text, pre_applied = mask(original, [], keep=GAZETTEER.normalised_aliases)
         result = extract(text)
     else:
+        pre_applied = []
         result = {"raw": cached["raw"], "engine": f"{cached['engine']} (replay)", "latency_ms": cached.get("latency_ms", 0), "error": None}
 
     fields, dropped, pii_spans = check_evidence(text, result["raw"])
     filled_by_rules = fill_gaps(text, fields)
     masked, applied = mask(text, pii_spans, keep=GAZETTEER.normalised_aliases)
+    applied = pre_applied + applied
     for f in fields.values():
         f["quote"] = apply_mask(f["quote"], applied)
         if isinstance(f["value"], str):
@@ -94,7 +100,7 @@ def process(text: str, channel: str, source: str, ts: datetime | None = None, ca
 
     # The place is resolved from the original words in memory; only the masked text is stored.
     place_quote = (result["raw"].get("place_phrase") or {}).get("quote") if fields["place_phrase"]["quote"] else None
-    zone_id = GAZETTEER.resolve(place_quote, text)
+    zone_id = GAZETTEER.resolve(place_quote, original)
     receipt = "BB-" + "".join(secrets.choice(_RECEIPT_ALPHABET) for _ in range(4))
     issue = fields["issue"]["value"]
 
@@ -202,7 +208,12 @@ def health() -> dict:
         _llm_health["checked"] = time.monotonic()
     return {
         "ok": True,
-        "llm": {"model": config.LLM_MODEL, "available": _llm_health["available"] and not config.AI_OFF, "license": "Apache-2.0", "runs": "local (Ollama)"},
+        "llm": {
+            "model": config.HOSTED_MODEL if config.HOSTED_ON else config.LLM_MODEL,
+            "available": (config.HOSTED_ON or _llm_health["available"]) and not config.AI_OFF,
+            "license": "Apache-2.0",
+            "runs": f"hosted open model, falls back to local {config.LLM_MODEL}" if config.HOSTED_ON else "local (Ollama)",
+        },
         "asr": {"model": asr.model_name(), "device": asr.state["device"], "loaded": asr.state["loaded"], "license": "MIT", "error": asr.state["error"]},
         "demo_now": iso(now()),
         "network_name_ar": NETWORK.data.get("name_ar"),
@@ -348,6 +359,7 @@ def privacy() -> dict:
         "audio_files_on_disk": audio_files,
         "stored_fields": STORED_FIELDS,
         "not_stored": ["audio", "original text", "names", "phone numbers", "plates", "exact location", "IP address", "account"],
-        "outbound_hosts": [f"{config.OLLAMA_URL} (Ollama, same machine)"],
+        "outbound_hosts": [f"{config.OLLAMA_URL} (Ollama, same machine)"]
+        + ([f"{config.HOSTED_BASE_URL} ({config.HOSTED_MODEL}, masked text only)"] if config.HOSTED_ON else []),
         "retention_days": config.RETENTION_DAYS,
     }

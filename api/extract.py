@@ -76,6 +76,26 @@ def call_llm(text: str) -> dict:
     return json.loads(response.json()["message"]["content"])
 
 
+def call_hosted(text: str) -> dict:
+    """The same prompt and schema against a larger open-weight model on an OpenAI-compatible API."""
+    body = {
+        "model": config.HOSTED_MODEL,
+        "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": text}],
+        "temperature": 0,
+        "response_format": {"type": "json_schema", "json_schema": {"name": "complaint", "strict": True, "schema": SCHEMA}},
+    }
+    if "openrouter.ai" in config.HOSTED_BASE_URL:
+        body["provider"] = {"require_parameters": True}  # only route to endpoints that honour the schema
+    response = httpx.post(
+        f"{config.HOSTED_BASE_URL}/chat/completions",
+        json=body,
+        headers={"Authorization": f"Bearer {config.HOSTED_API_KEY}"},
+        timeout=config.LLM_TIMEOUT_S,
+    )
+    response.raise_for_status()
+    return json.loads(response.json()["choices"][0]["message"]["content"])
+
+
 def _valid(field: str, value) -> bool:
     if field == "issue":
         return value in ISSUES
@@ -157,14 +177,19 @@ def fill_gaps(text: str, fields: dict) -> list[str]:
 
 
 def extract(text: str) -> dict:
-    """Return {raw, engine, latency_ms, error}. Falls back to rules when the model fails."""
+    """Return {raw, engine, latency_ms, error}. Hosted open model, then the local one, then rules."""
     started = time.perf_counter()
-    if not config.AI_OFF:
-        try:
-            raw = call_llm(text)
-            return {"raw": raw, "engine": config.LLM_MODEL, "latency_ms": int((time.perf_counter() - started) * 1000), "error": None}
-        except Exception as exc:  # noqa: BLE001 - any model failure must degrade, not break the demo
-            error = f"{type(exc).__name__}: {exc}"[:200]
+    errors: list[str] = []
+    if config.AI_OFF:
+        errors.append("AI turned off (BB_AI=off)")
     else:
-        error = "AI turned off (BB_AI=off)"
+        tiers = ([(call_hosted, config.HOSTED_MODEL)] if config.HOSTED_ON else []) + [(call_llm, config.LLM_MODEL)]
+        for call, name in tiers:
+            try:
+                raw = call(text)
+                ms = int((time.perf_counter() - started) * 1000)
+                return {"raw": raw, "engine": name, "latency_ms": ms, "error": "; ".join(errors) or None}
+            except Exception as exc:  # noqa: BLE001 - any model failure must degrade, not break the demo
+                errors.append(f"{name}: {type(exc).__name__}: {exc}"[:200])
+    error = "; ".join(errors)
     return {"raw": rules_extract(text), "engine": "rules", "latency_ms": int((time.perf_counter() - started) * 1000), "error": error}
