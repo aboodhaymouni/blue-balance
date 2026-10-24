@@ -1,0 +1,943 @@
+{
+ "model": "qwen2.5:7b",
+ "items": {
+  "RP01": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "yesterday",
+     "quote": "من امبارح"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "بجبل التاج",
+     "quote": "بجبل التاج"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3313
+  },
+  "RP02": {
+   "raw": {
+    "issue": {
+     "value": "billing",
+     "quote": "فاتورة"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "بجبل الحسين",
+     "quote": "بجبل الحسين"
+    },
+    "pii_spans": [
+     "٣٨ دينار"
+    ]
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3252
+  },
+  "RP03": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "yesterday",
+     "quote": "من امبارح"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "والجيران كمان"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "الأشرفية",
+     "quote": "بالأشرفية"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3242
+  },
+  "RP04": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "بالمحطة",
+     "quote": "بالمحطة"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 2860
+  },
+  "RP05": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "وين المي"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "ال Taj ",
+     "quote": "التاج"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3654
+  },
+  "RP06": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي مقطوعة عنا"
+    },
+    "since": {
+     "value": "today",
+     "quote": "من الصبح"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "تحت مسجد أبو درويش",
+     "quote": "تحت مسجد أبو درويش"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3499
+  },
+  "RP07": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "today",
+     "quote": "اليوم دورنا ومن الساعة ٧"
+    },
+    "turn_claim": {
+     "value": true,
+     "quote": "دورنا"
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "الهاشمي الشمالي",
+     "quote": "بالهاشمي الشمالي"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 4200
+  },
+  "RP08": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما وصلت"
+    },
+    "since": {
+     "value": "today",
+     "quote": "اليوم"
+    },
+    "turn_claim": {
+     "value": true,
+     "quote": "دورنا بماركا الشمالية"
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "بماركا الشمالية",
+     "quote": "بماركا الشمالية"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3301
+  },
+  "RP09": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "المي مقطوعة"
+    },
+    "since": {
+     "value": "yesterday",
+     "quote": "من امبارح"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "قرب سكة الحديد",
+     "quote": "قرب سكة الحديد"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3197
+  },
+  "RP10": {
+   "raw": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "المي ضعيفة كثير وما بتطلع عالخزان"
+    },
+    "since": {
+     "value": "today",
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "شارع البطحاء كله هيك"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "شارع البطحاء",
+     "quote": "شارع البطحاء كله هيك"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3608
+  },
+  "RP11": {
+   "raw": {
+    "issue": {
+     "value": "cut_early",
+     "quote": "اجت ساعة وقطعت"
+    },
+    "since": {
+     "value": "today",
+     "quote": "اليوم"
+    },
+    "turn_claim": {
+     "value": true,
+     "quote": "اليوم دورنا بطبربور"
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": null,
+     "quote": null
+    },
+    "pii_spans": [
+     "دورنا",
+     "بطبربور"
+    ]
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3338
+  },
+  "RP12": {
+   "raw": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "الخزان فضي"
+    },
+    "since": {
+     "value": "today",
+     "quote": "اليوم"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "دوار التاج",
+     "quote": "دوار التاج"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3108
+  },
+  "RP13": {
+   "raw": {
+    "issue": {
+     "value": "cut_early",
+     "quote": "اجت شوي وقطعت"
+    },
+    "since": {
+     "value": "today",
+     "quote": "اليوم"
+    },
+    "turn_claim": {
+     "value": true,
+     "quote": "دورنا اليوم"
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": null,
+     "quote": null
+    },
+    "pii_spans": [
+     "ام خالد",
+     "الهاشمي"
+    ]
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3318
+  },
+  "RP14": {
+   "raw": {
+    "issue": {
+     "value": "dirty_water",
+     "quote": "لونها"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "قرب معبد هرقل",
+     "quote": "قرب معبد هرقل"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3015
+  },
+  "RP15": {
+   "raw": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "من يومين"
+    },
+    "since": {
+     "value": "two_three_days",
+     "quote": "من يومين"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "جبل الأشرفية",
+     "quote": "جبل الأشرفية"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3168
+  },
+  "RP16": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في ولا نقطة"
+    },
+    "since": {
+     "value": "today",
+     "quote": "عند مستشفى الأمير حمزة"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "والجيران كمان"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "مستشفى الأمير حمزة",
+     "quote": "مستشفى الأمير حمزة"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3470
+  },
+  "RP17": {
+   "raw": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": " الضغط ضعيف"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "قرب مطار ماركا",
+     "quote": "قرب مطار ماركا"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 5994
+  },
+  "RP18": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "two_three_days",
+     "quote": "من يومين"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "حي المحطة",
+     "quote": "حي المحطة"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3226
+  },
+  "RP19": {
+   "raw": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "مش مقطوعة بس ضعيفة كثير"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": true,
+     "quote": "دورنا اليوم"
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "الهاشمي الشمالي",
+     "quote": "الهاشمي الشمالي"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3374
+  },
+  "RP20": {
+   "raw": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "ضعيفة كثير المي باسكان طبربور، ما بتطلع ع السطح"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "بسكن طبربور",
+     "quote": "باسكان طبربور"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3362
+  },
+  "RP21": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما فيها مي"
+    },
+    "since": {
+     "value": "today",
+     "quote": "جنب مستشفى البشير"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "حارتنا جنب مستشفى البشير",
+     "quote": "حارتنا جنب مستشفى البشير"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3427
+  },
+  "RP22": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "today",
+     "quote": "من الصبح"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "كل المحلات بتشتكي"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "سوق الهاشمي",
+     "quote": "سوق الهاشمي"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3294
+  },
+  "RP23": {
+   "raw": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "المي ضعيفة شوي"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "حي النصر",
+     "quote": "حي النصر"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 2986
+  },
+  "RP24": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "المي راحت"
+    },
+    "since": {
+     "value": "today",
+     "quote": "الساعة ٨"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "هاشمي الشمالي",
+     "quote": "بالهاشمي الشمالي"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3265
+  },
+  "RP25": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "صرلنا يومين بدون مي"
+    },
+    "since": {
+     "value": "two_three_days",
+     "quote": "صرلنا يومين"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "بجبل التاج",
+     "quote": "بجبل التاج"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3315
+  },
+  "RP26": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "today",
+     "quote": "من الصبح"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "والجيران نفس الشي"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "سوق ماركا",
+     "quote": "سوق ماركا"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3218
+  },
+  "RP27": {
+   "raw": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "المي بتنقط نقط"
+    },
+    "since": {
+     "value": "today",
+     "quote": "اليوم"
+    },
+    "turn_claim": {
+     "value": true,
+     "quote": "اليوم دورنا بالهاشمي"
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "بالهاشمي",
+     "quote": "بالهاشمي"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3300
+  },
+  "RP28": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "today",
+     "quote": "عند مجمع الشمال"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "كل البنايات حوالينا"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "مجمع الشمال",
+     "quote": "مجمع الشمال"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3235
+  },
+  "RP29": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "today",
+     "quote": "الشارع هيك"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "كل الشارع هيك"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "دوار المحطة",
+     "quote": "دوار المحطة"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3256
+  },
+  "RP30": {
+   "raw": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "two_three_days",
+     "quote": "صار ٣ ساعات"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "شارع البطحاء",
+     "quote": "بشارع البطحاء"
+    },
+    "pii_spans": []
+   },
+   "engine": "qwen2.5:7b",
+   "latency_ms": 3236
+  }
+ }
+}

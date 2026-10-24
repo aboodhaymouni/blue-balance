@@ -1,0 +1,11 @@
+Blue Balance
+Copyright 2026 the Blue Balance team
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Open-weight models used at run time (downloaded by their own tools, not redistributed here):
+- Qwen2.5-7B-Instruct, Alibaba Qwen team, Apache License 2.0, served by Ollama (MIT).
+- Whisper large-v3, OpenAI, MIT License, run with faster-whisper / CTranslate2 (MIT).
+
+Data in data/ was written by the team for this project. Neighbourhood names are real; the pipe network,
+the schedules and every complaint are invented. Data is released under CC BY 4.0.

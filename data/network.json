@@ -1,0 +1,20 @@
+{
+  "name_ar": "شبكة توضيحية — شرق عمّان",
+  "disclaimer_ar": "أسماء الأحياء حقيقية، أما الأنابيب والجداول فمُخترعة للعرض.",
+  "nodes": [
+    {"id": "R1", "type": "reservoir", "name_ar": "الخزان التجريبي", "parent": null},
+    {"id": "M1", "type": "main", "name_ar": "الخط الرئيسي ١", "parent": "R1", "diameter_mm": 400},
+    {"id": "M2", "type": "main", "name_ar": "الخط الرئيسي ٢", "parent": "R1", "diameter_mm": 500},
+    {"id": "M3", "type": "main", "name_ar": "الخط الرئيسي ٣", "parent": "R1", "diameter_mm": 350},
+    {"id": "Z01", "type": "zone", "name_ar": "جبل النزهة", "parent": "M1", "subscribers": 5200},
+    {"id": "Z02", "type": "zone", "name_ar": "جبل الحسين", "parent": "M1", "subscribers": 6800},
+    {"id": "Z03", "type": "zone", "name_ar": "جبل القلعة", "parent": "M1", "subscribers": 2700},
+    {"id": "Z04", "type": "zone", "name_ar": "ماركا الشمالية", "parent": "M2", "subscribers": 6100},
+    {"id": "Z05", "type": "zone", "name_ar": "الهاشمي الشمالي", "parent": "M2", "subscribers": 8900},
+    {"id": "Z06", "type": "zone", "name_ar": "طبربور", "parent": "M2", "subscribers": 7300},
+    {"id": "Z07", "type": "zone", "name_ar": "جبل النصر", "parent": "M2", "subscribers": 4200},
+    {"id": "Z08", "type": "zone", "name_ar": "جبل التاج", "parent": "M3", "subscribers": 4800},
+    {"id": "Z09", "type": "zone", "name_ar": "الأشرفية", "parent": "M3", "subscribers": 6400},
+    {"id": "Z10", "type": "zone", "name_ar": "المحطة", "parent": "M3", "subscribers": 3500}
+  ]
+}

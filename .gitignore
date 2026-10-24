@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+api/*.db
+node_modules/
+web/dist/
+web/.vite/
+.env
+.env.local
