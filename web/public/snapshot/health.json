@@ -1,10 +1,10 @@
 {
  "ok": true,
  "llm": {
-  "model": "qwen2.5:7b",
+  "model": "openai/gpt-oss-120b",
   "available": true,
   "license": "Apache-2.0",
-  "runs": "local (Ollama)"
+  "runs": "hosted open model, falls back to local qwen2.5:7b"
  },
  "asr": {
   "model": "whisper large-v3-turbo",
@@ -13,6 +13,6 @@
   "license": "MIT",
   "error": null
  },
- "demo_now": "2026-10-24T10:00:07+03:00",
+ "demo_now": "2026-10-24T10:00:03+03:00",
  "network_name_ar": "شبكة توضيحية — شرق عمّان"
 }

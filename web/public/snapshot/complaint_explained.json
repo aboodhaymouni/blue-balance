@@ -1,6 +1,6 @@
 {
- "receipt": "BB-8Q7A",
- "ts": "2026-10-24T10:00:04+03:00",
+ "receipt": "BB-7L5D",
+ "ts": "2026-10-24T10:00:01+03:00",
  "channel": "text",
  "source": "live",
  "text_redacted": "ما في ولا نقطة مي عنا بجبل التاج من امبارح",
@@ -26,21 +26,16 @@
    "quote": null
   },
   "place_phrase": {
-   "value": null,
-   "quote": null
+   "value": "جبل التاج",
+   "quote": "جبل التاج"
   }
  },
- "dropped": [
-  {
-   "field": "place_phrase",
-   "reason": "quote_not_found"
-  }
- ],
+ "dropped": [],
  "pii_masked": 0,
  "status": "explained",
- "reply_ar": "وصلت شكواك (رقمها BB-8Q7A). هاد مش عطل: منطقة جبل التاج مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 06:00 لـ 20:00.",
- "engine": "qwen2.5:7b",
- "latency_ms": 3265,
+ "reply_ar": "وصلت شكواك (رقمها BB-7L5D). هاد مش عطل: منطقة جبل التاج مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 06:00 لـ 20:00.",
+ "engine": "openai/gpt-oss-120b",
+ "latency_ms": 1755,
  "segment_status": null,
  "zone": {
   "id": "Z08",

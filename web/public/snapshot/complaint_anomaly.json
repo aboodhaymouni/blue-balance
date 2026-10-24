@@ -1,5 +1,5 @@
 {
- "receipt": "BB-9W8D",
+ "receipt": "BB-E497",
  "ts": "2026-10-24T10:00:00+03:00",
  "channel": "text",
  "source": "live",
@@ -19,23 +19,23 @@
   },
   "neighbours_too": {
    "value": true,
-   "quote": "والجيران كمان"
+   "quote": "الجيران كمان"
   },
   "tanker_seen": {
    "value": null,
    "quote": null
   },
   "place_phrase": {
-   "value": "بالهاشمي الشمالي",
-   "quote": "بالهاشمي الشمالي"
+   "value": "الهاشمي الشمالي",
+   "quote": "الهاشمي الشمالي"
   }
  },
  "dropped": [],
  "pii_masked": 2,
  "status": "anomaly",
- "reply_ar": "وصلت شكواك (رقمها BB-9W8D). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
- "engine": "qwen2.5:7b",
- "latency_ms": 4292,
+ "reply_ar": "وصلت شكواك (رقمها BB-E497). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+ "engine": "openai/gpt-oss-120b",
+ "latency_ms": 1851,
  "segment_status": null,
  "zone": {
   "id": "Z05",

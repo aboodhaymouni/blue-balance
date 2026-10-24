@@ -1,0 +1,847 @@
+{
+ "summary": {
+  "set": "test",
+  "n": 20,
+  "engine": "openai/gpt-oss-120b",
+  "issue_accuracy": "18/20",
+  "stated_values_correct": "35/37",
+  "invented_fields": 2,
+  "wrong_values": 1,
+  "quotes_dropped": 1,
+  "zone_accuracy": "18/18",
+  "pii_masked": "2/2",
+  "latency_median_s": 8.44,
+  "latency_max_s": 30.5
+ },
+ "rows": [
+  {
+   "id": "T01",
+   "fields": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ولا نقطة مي"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": true,
+     "quote": "دورنا اليوم"
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "كله ناشف"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "الهاشمي الشمالي",
+     "quote": "الهاشمي الشمالي"
+    }
+   },
+   "dropped": [],
+   "zone": "Z05",
+   "label": {
+    "issue": "no_water",
+    "since": null,
+    "turn_claim": true,
+    "neighbours_too": true,
+    "tanker_seen": false,
+    "place_phrase": "الهاشمي الشمالي",
+    "zone": "Z05",
+    "pii": []
+   }
+  },
+  {
+   "id": "T02",
+   "fields": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "المي ضعيفة"
+    },
+    "since": {
+     "value": "yesterday",
+     "quote": "من امبارح"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "سوق النزهة",
+     "quote": "سوق النزهة"
+    }
+   },
+   "dropped": [],
+   "zone": "Z01",
+   "label": {
+    "issue": "weak_pressure",
+    "since": "yesterday",
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "سوق النزهة",
+    "zone": "Z01",
+    "pii": []
+   }
+  },
+  {
+   "id": "T03",
+   "fields": {
+    "issue": {
+     "value": "leak_seen",
+     "quote": "كسر ماسورة"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "محطة القطار",
+     "quote": "محطة القطار"
+    }
+   },
+   "dropped": [],
+   "zone": "Z10",
+   "label": {
+    "issue": "leak_seen",
+    "since": null,
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "محطة القطار",
+    "zone": "Z10",
+    "pii": []
+   }
+  },
+  {
+   "id": "T04",
+   "fields": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما عنا مي"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": true,
+     "quote": "تنك"
+    },
+    "place_phrase": {
+     "value": "جبل التاج",
+     "quote": "جبل التاج"
+    }
+   },
+   "dropped": [],
+   "zone": "Z08",
+   "label": {
+    "issue": "no_water",
+    "since": null,
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": true,
+    "place_phrase": "جبل التاج",
+    "zone": "Z08",
+    "pii": [
+     "12-34567"
+    ]
+   }
+  },
+  {
+   "id": "T05",
+   "fields": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما وصلتنا المي"
+    },
+    "since": {
+     "value": "week_plus",
+     "quote": "من اسبوع"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": null,
+     "quote": null
+    }
+   },
+   "dropped": [],
+   "zone": null,
+   "label": {
+    "issue": "no_water",
+    "since": "week_plus",
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": null,
+    "zone": null,
+    "pii": []
+   }
+  },
+  {
+   "id": "T06",
+   "fields": {
+    "issue": {
+     "value": "cut_early",
+     "quote": "بتقطع"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "الجيران كمان"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "مخيم الحسين",
+     "quote": "مخيم الحسين"
+    }
+   },
+   "dropped": [],
+   "zone": "Z02",
+   "label": {
+    "issue": "cut_early",
+    "since": null,
+    "turn_claim": false,
+    "neighbours_too": true,
+    "tanker_seen": false,
+    "place_phrase": "مخيم الحسين",
+    "zone": "Z02",
+    "pii": []
+   }
+  },
+  {
+   "id": "T07",
+   "fields": {
+    "issue": {
+     "value": "no_water",
+     "quote": "المي مقطوعة"
+    },
+    "since": {
+     "value": "two_three_days",
+     "quote": "من يومين"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "طبربور",
+     "quote": "طبربور"
+    }
+   },
+   "dropped": [],
+   "zone": "Z06",
+   "label": {
+    "issue": "no_water",
+    "since": "two_three_days",
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "طبربور",
+    "zone": "Z06",
+    "pii": []
+   }
+  },
+  {
+   "id": "T08",
+   "fields": {
+    "issue": {
+     "value": "dirty_water",
+     "quote": "لونها بني"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "مسجد ابو درويش",
+     "quote": "مسجد ابو درويش"
+    }
+   },
+   "dropped": [],
+   "zone": "Z09",
+   "label": {
+    "issue": "dirty_water",
+    "since": null,
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "مسجد ابو درويش",
+    "zone": "Z09",
+    "pii": []
+   }
+  },
+  {
+   "id": "T09",
+   "fields": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "المي ضعيفة"
+    },
+    "since": {
+     "value": "today",
+     "quote": "اليوم"
+    },
+    "turn_claim": {
+     "value": true,
+     "quote": "دورنا"
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "ماركا",
+     "quote": "ماركا"
+    }
+   },
+   "dropped": [],
+   "zone": "Z04",
+   "label": {
+    "issue": "weak_pressure",
+    "since": null,
+    "turn_claim": true,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "ماركا",
+    "zone": "Z04",
+    "pii": []
+   }
+  },
+  {
+   "id": "T10",
+   "fields": {
+    "issue": {
+     "value": "no_water",
+     "quote": "مقطوعة"
+    },
+    "since": {
+     "value": "today",
+     "quote": "من الصبح"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "كل الحارة"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "جبل النصر",
+     "quote": "جبل النصر"
+    }
+   },
+   "dropped": [],
+   "zone": "Z07",
+   "label": {
+    "issue": "no_water",
+    "since": "today",
+    "turn_claim": false,
+    "neighbours_too": true,
+    "tanker_seen": false,
+    "place_phrase": "جبل النصر",
+    "zone": "Z07",
+    "pii": []
+   }
+  },
+  {
+   "id": "T11",
+   "fields": {
+    "issue": {
+     "value": "no_water",
+     "quote": "مي ما اجت"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "جبل القلعة",
+     "quote": "جبل القلعة"
+    }
+   },
+   "dropped": [],
+   "zone": "Z03",
+   "label": {
+    "issue": "billing",
+    "since": null,
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "جبل القلعة",
+    "zone": "Z03",
+    "pii": []
+   }
+  },
+  {
+   "id": "T12",
+   "fields": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "ضعيف"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "شارع البطحاء",
+     "quote": "شارع البطحاء"
+    }
+   },
+   "dropped": [],
+   "zone": "Z05",
+   "label": {
+    "issue": "weak_pressure",
+    "since": null,
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "شارع البطحاء",
+    "zone": "Z05",
+    "pii": []
+   }
+  },
+  {
+   "id": "T13",
+   "fields": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما في مي"
+    },
+    "since": {
+     "value": "two_three_days",
+     "quote": "من ٣ ايام"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "المحطة",
+     "quote": "المحطة"
+    }
+   },
+   "dropped": [],
+   "zone": "Z10",
+   "label": {
+    "issue": "no_water",
+    "since": "two_three_days",
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "المحطة",
+    "zone": "Z10",
+    "pii": [
+     "٠٧٨١٢٣٤٥٦٧"
+    ]
+   }
+  },
+  {
+   "id": "T14",
+   "fields": {
+    "issue": {
+     "value": "leak_seen",
+     "quote": "تسريب"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "دوار طبربور",
+     "quote": "دوار طبربور"
+    }
+   },
+   "dropped": [],
+   "zone": "Z06",
+   "label": {
+    "issue": "leak_seen",
+    "since": null,
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "دوار طبربور",
+    "zone": "Z06",
+    "pii": []
+   }
+  },
+  {
+   "id": "T15",
+   "fields": {
+    "issue": {
+     "value": "no_water",
+     "quote": "ما اجت المي"
+    },
+    "since": {
+     "value": "week_plus",
+     "quote": "اسبوع"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "جبل التاج",
+     "quote": "جبل التاج"
+    }
+   },
+   "dropped": [],
+   "zone": "Z08",
+   "label": {
+    "issue": "no_water",
+    "since": "week_plus",
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "جبل التاج",
+    "zone": "Z08",
+    "pii": []
+   }
+  },
+  {
+   "id": "T16",
+   "fields": {
+    "issue": {
+     "value": "cut_early",
+     "quote": "قطعت"
+    },
+    "since": {
+     "value": "today",
+     "quote": "اليوم"
+    },
+    "turn_claim": {
+     "value": true,
+     "quote": "دورنا اليوم"
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "حي النزهة",
+     "quote": "حي النزهة"
+    }
+   },
+   "dropped": [],
+   "zone": "Z01",
+   "label": {
+    "issue": "cut_early",
+    "since": null,
+    "turn_claim": true,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "حي النزهة",
+    "zone": "Z01",
+    "pii": []
+   }
+  },
+  {
+   "id": "T17",
+   "fields": {
+    "issue": {
+     "value": null,
+     "quote": null
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "الجيران كمان"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": null,
+     "quote": null
+    }
+   },
+   "dropped": [
+    {
+     "field": "issue",
+     "reason": "quote_not_found"
+    }
+   ],
+   "zone": null,
+   "label": {
+    "issue": "no_water",
+    "since": null,
+    "turn_claim": false,
+    "neighbours_too": true,
+    "tanker_seen": false,
+    "place_phrase": null,
+    "zone": null,
+    "pii": []
+   }
+  },
+  {
+   "id": "T18",
+   "fields": {
+    "issue": {
+     "value": "no_water",
+     "quote": "بدون مي"
+    },
+    "since": {
+     "value": "yesterday",
+     "quote": "من امبارح"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": true,
+     "quote": "حارتنا ورا مستشفى البشير كلها"
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "حارتنا ورا مستشفى البشير",
+     "quote": "حارتنا ورا مستشفى البشير"
+    }
+   },
+   "dropped": [],
+   "zone": "Z09",
+   "label": {
+    "issue": "no_water",
+    "since": "yesterday",
+    "turn_claim": false,
+    "neighbours_too": true,
+    "tanker_seen": false,
+    "place_phrase": "مستشفى البشير",
+    "zone": "Z09",
+    "pii": []
+   }
+  },
+  {
+   "id": "T19",
+   "fields": {
+    "issue": {
+     "value": "weak_pressure",
+     "quote": "ضعيفة"
+    },
+    "since": {
+     "value": "two_three_days",
+     "quote": "٣ ايام"
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "دوار فراس",
+     "quote": "دوار فراس"
+    }
+   },
+   "dropped": [],
+   "zone": "Z02",
+   "label": {
+    "issue": "weak_pressure",
+    "since": "two_three_days",
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "دوار فراس",
+    "zone": "Z02",
+    "pii": []
+   }
+  },
+  {
+   "id": "T20",
+   "fields": {
+    "issue": {
+     "value": "cut_early",
+     "quote": "وقفت بعد نص ساعة"
+    },
+    "since": {
+     "value": null,
+     "quote": null
+    },
+    "turn_claim": {
+     "value": null,
+     "quote": null
+    },
+    "neighbours_too": {
+     "value": null,
+     "quote": null
+    },
+    "tanker_seen": {
+     "value": null,
+     "quote": null
+    },
+    "place_phrase": {
+     "value": "المطار المدني",
+     "quote": "المطار المدني"
+    }
+   },
+   "dropped": [],
+   "zone": "Z04",
+   "label": {
+    "issue": "cut_early",
+    "since": null,
+    "turn_claim": false,
+    "neighbours_too": false,
+    "tanker_seen": false,
+    "place_phrase": "المطار المدني",
+    "zone": "Z04",
+    "pii": []
+   }
+  }
+ ]
+}

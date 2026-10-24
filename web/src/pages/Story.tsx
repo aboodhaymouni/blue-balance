@@ -143,7 +143,9 @@ const WHO = {
 const EVAL: { engine: string; issue: string; values: string; invented: string; shipped?: boolean }[] = [
   { engine: 'قواعد كلمات (أساس للمقارنة)', issue: '14/20', values: '14/37', invented: '0' },
   { engine: 'qwen2.5:7b لحاله', issue: '14/20', values: '28/37', invented: '3' },
-  { engine: 'qwen2.5:7b + تعبئة بالقواعد', issue: '17/20', values: '31/37', invented: '3', shipped: true },
+  { engine: 'qwen2.5:7b + تعبئة بالقواعد (احتياط محلي)', issue: '17/20', values: '31/37', invented: '3' },
+  { engine: 'gpt-oss-120b لحاله', issue: '18/20', values: '35/37', invented: '2' },
+  { engine: 'gpt-oss-120b + تعبئة بالقواعد', issue: '20/20', values: '37/37', invented: '1', shipped: true },
 ]
 
 export default function Story() {
@@ -172,7 +174,7 @@ export default function Story() {
             </a>
           </div>
           <ul className="mt-7 flex flex-wrap gap-2 text-sm">
-            {['Apache-2.0', 'Qwen2.5-7B · Apache-2.0', 'Whisper · MIT', '0 طلب لجهات خارجية'].map((t) => (
+            {['Apache-2.0', 'gpt-oss-120b · Apache-2.0', 'Qwen2.5-7B · Apache-2.0', 'Whisper · MIT'].map((t) => (
               <li key={t} className="rounded-full bg-white px-3 py-1 font-mono text-ink-2 ring-1 ring-line" dir="auto">
                 {t}
               </li>
@@ -281,11 +283,12 @@ export default function Story() {
       </Section>
 
       {/* Open and measured */}
-      <Section id="open" eyebrow="مفتوح ومقاس" title="نماذج مفتوحة بتشتغل على لابتوب واحد، وأرقامها منشورة" lead="ولا API مغلق. الكود Apache-2.0، والبيانات CC BY 4.0، وكل نموذج إله رخصته.">
+      <Section id="open" eyebrow="مفتوح ومقاس" title="نماذج مفتوحة بس، وأرقامها منشورة" lead="ولا نموذج مغلق. الكبير عبر API بيستلم النص بعد ما تنخفى الأرقام والكنى، والمحلي احتياط بيشتغل بدون نت. الكود Apache-2.0، والبيانات CC BY 4.0.">
         <div className="grid gap-4 lg:grid-cols-[1fr_1.4fr]">
           <div className="flex flex-col gap-4">
             {[
-              { icon: <Cpu className="size-5" aria-hidden />, name: 'Qwen2.5-7B-Instruct', lic: 'Apache-2.0', role: 'استخراج الحقول مع الاقتباس، وكشف الأسماء والأرقام. مقيّد بـ JSON schema، حرارة 0.', where: 'Ollama · RTX 3060' },
+              { icon: <Cpu className="size-5" aria-hidden />, name: 'gpt-oss-120b', lic: 'Apache-2.0', role: 'النموذج الأساسي للاستخراج، عبر OpenRouter. بياخذ نص مخفي منه الأرقام والكنى بس.', where: 'OpenRouter · open weights' },
+              { icon: <Cpu className="size-5" aria-hidden />, name: 'Qwen2.5-7B-Instruct', lic: 'Apache-2.0', role: 'احتياط محلي بنفس الـ schema: إذا النت انقطع أو الكبير تأخّر، الشغل بيكمل على اللابتوب.', where: 'Ollama · RTX 3060' },
               { icon: <AudioLines className="size-5" aria-hidden />, name: 'Whisper large-v3-turbo', lic: 'MIT', role: 'الصوت ← نص باللهجة. الصوت بينحذف بعد التحويل.', where: 'faster-whisper · CUDA' },
             ].map((m) => (
               <div key={m.name} className="card flex flex-col gap-2 p-5">
@@ -331,7 +334,7 @@ export default function Story() {
                 ))}
               </tbody>
             </table>
-            <p className="border-t border-line px-5 py-3 text-xs text-ink-2/60">المنطقة صحيحة 18/18، والمعلومات الشخصية انخفت 2/2. المجموعة صغيرة، فهاي قياس أوّلي مش حكم نهائي.</p>
+            <p className="border-t border-line px-5 py-3 text-xs text-ink-2/60">المنطقة صحيحة 18/18، والمعلومات الشخصية انخفت 2/2 بكل المحرّكات. gpt-oss-120b أدق بس أبطأ (6–8 ثواني)، فإذا تأخّر أكثر من 12 ثانية بيستلم المحلي. جزء من الفرق بين تشغيلتيه تذبذب النموذج نفسه. المجموعة صغيرة، فهاي قياس أوّلي.</p>
           </div>
         </div>
       </Section>
@@ -345,7 +348,7 @@ export default function Story() {
             [<ShieldCheck key="i" className="size-5" aria-hidden />, 'الأسماء والأرقام بتنخفى', 'النموذج بيكشفها، وقواعد ثابتة بتمسك التلفونات والأرقام الوطنية واللوحات والكنى.'],
             [<FileText key="i" className="size-5" aria-hidden />, 'البيانات العامة مجمّعة', 'أي خانة أقل من 5 شكاوى مخفية، والتصدير CSV مفتوح بدون نصوص.'],
             [<UserCheck key="i" className="size-5" aria-hidden />, 'ملاحظات عن أنابيب، مش اتهامات', 'ولا عطل بيصير حقيقة بدون مهندس، والنموذج ما بيكتب للمواطن.'],
-            [<Calculator key="i" className="size-5" aria-hidden />, 'كل إشي محلي', 'الجهة الوحيدة اللي بيحكي معها الخادم هي Ollama على نفس الجهاز.'],
+            [<Calculator key="i" className="size-5" aria-hidden />, 'الطالع لبرّا مخفي أوّلًا', 'الأرقام والكنى بتنخفى على اللابتوب قبل ما يروح أي نص للنموذج الكبير، والصوت ما بيطلع أبدًا. وبدون نت، كل إشي بيكمل محلي.'],
           ].map(([icon, title, body]) => (
             <li key={String(title)} className="card flex gap-3 p-5">
               <span className="mt-0.5 text-water-700">{icon}</span>

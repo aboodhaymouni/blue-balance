@@ -23,6 +23,8 @@ HOSTED_BASE_URL = os.environ.get("BB_LLM_BASE_URL") or (
     "https://api.groq.com/openai/v1" if os.environ.get("GROQ_API_KEY") and not os.environ.get("OPENROUTER_API_KEY") else "https://openrouter.ai/api/v1"
 )
 HOSTED_MODEL = os.environ.get("BB_HOSTED_MODEL", "openai/gpt-oss-120b")  # Apache-2.0 open weights
+# A slow hosted answer must not stall a live demo: after this many seconds the local model takes over.
+HOSTED_TIMEOUT_S = float(os.environ.get("BB_HOSTED_TIMEOUT", "12"))
 HOSTED_ON = bool(HOSTED_API_KEY) and os.environ.get("BB_HOSTED", "").lower() != "off"
 
 # Open-weight speech-to-text (faster-whisper). Falls back to CPU if CUDA cannot load.

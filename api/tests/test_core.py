@@ -72,6 +72,26 @@ class FallbackTests(unittest.TestCase):
         self.assertEqual(result["raw"]["issue"]["value"], "no_water")
 
 
+    def test_slow_hosted_model_hits_the_deadline(self):
+        import time as _time
+        from unittest import mock
+
+        from api import extract as ex
+
+        def slow(_text):
+            _time.sleep(1)
+            return {"issue": {"value": "leak_seen", "quote": "x"}, "pii_spans": []}
+
+        ok = {"issue": {"value": "no_water", "quote": "ما في مي"}, "pii_spans": []}
+        with mock.patch.object(ex.config, "HOSTED_ON", True), mock.patch.object(ex.config, "AI_OFF", False), \
+                mock.patch.object(ex.config, "HOSTED_TIMEOUT_S", 0.1), mock.patch.object(ex, "call_hosted", slow), \
+                mock.patch.object(ex, "call_llm", lambda _t: ok):
+            started = _time.perf_counter()
+            result = ex.extract("ما في مي")
+        self.assertEqual(result["engine"], ex.config.LLM_MODEL)
+        self.assertLess(_time.perf_counter() - started, 0.8)
+
+
 class PiiTests(unittest.TestCase):
     def test_numbers_and_names(self):
         text = "انا ابو محمد رقمي 0791234567 والسيارة 12-34567"

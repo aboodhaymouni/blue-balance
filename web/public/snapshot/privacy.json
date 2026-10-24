@@ -24,7 +24,8 @@
   "account"
  ],
  "outbound_hosts": [
-  "http://127.0.0.1:11434 (Ollama, same machine)"
+  "http://127.0.0.1:11434 (Ollama, same machine)",
+  "https://openrouter.ai/api/v1 (openai/gpt-oss-120b, masked text only)"
  ],
  "retention_days": 30
 }

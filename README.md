@@ -56,7 +56,11 @@ python eval/build_replay_cache.py              # records the morning stream for 
 |---|---|---|---|---|---|---|---|
 | Keyword rules (baseline) | 14/20 | 14/37 | 0 | 0 | 18/18 | 2/2 | instant |
 | qwen2.5:7b alone | 14/20 | 28/37 | 3 | 1 | 18/18 | 2/2 | 3.5 s |
-| **qwen2.5:7b + rules fill (shipped)** | **17/20** | **31/37** | 3 | 1 | 18/18 | 2/2 | 3.2 s |
+| qwen2.5:7b + rules fill (local fallback) | 17/20 | 31/37 | 3 | 1 | 18/18 | 2/2 | 3.2 s |
+| gpt-oss-120b alone (OpenRouter) | 18/20 | 35/37 | 2 | 1 | 18/18 | 2/2 | 8.4 s |
+| **gpt-oss-120b + rules fill (primary)** | **20/20** | **37/37** | 1 | 0 | 18/18 | 2/2 | 6.4 s |
+
+The hosted model is open-weight (Apache-2.0) and only receives text after phones, IDs, plates and kunyas are masked on the laptop. If the whole call takes longer than 12 s or the network is down, the local model answers. Part of the gap between its two runs is the model's own run-to-run variation. Put `OPENROUTER_API_KEY=...` in `.env.local` (git-ignored) to turn it on.
 
 Results are in `eval/results/`. The test set was written separately from the prompt, by the team; it is small, so treat these as a first measurement.
 

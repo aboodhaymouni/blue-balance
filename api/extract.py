@@ -6,6 +6,7 @@ When the model is unreachable, a keyword fallback fills only the issue type.
 """
 import json
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 import httpx
 
@@ -85,12 +86,13 @@ def call_hosted(text: str) -> dict:
         "response_format": {"type": "json_schema", "json_schema": {"name": "complaint", "strict": True, "schema": SCHEMA}},
     }
     if "openrouter.ai" in config.HOSTED_BASE_URL:
-        body["provider"] = {"require_parameters": True}  # only route to endpoints that honour the schema
+        # Only endpoints that honour the schema, and the fastest of those first.
+        body["provider"] = {"require_parameters": True, "sort": "latency"}
     response = httpx.post(
         f"{config.HOSTED_BASE_URL}/chat/completions",
         json=body,
         headers={"Authorization": f"Bearer {config.HOSTED_API_KEY}"},
-        timeout=config.LLM_TIMEOUT_S,
+        timeout=config.HOSTED_TIMEOUT_S,
     )
     response.raise_for_status()
     return json.loads(response.json()["choices"][0]["message"]["content"])
@@ -176,6 +178,16 @@ def fill_gaps(text: str, fields: dict) -> list[str]:
     return ["issue"]
 
 
+_pool = ThreadPoolExecutor(max_workers=4)
+
+
+def _with_deadline(call, seconds: float):
+    """httpx timeouts apply per read, not to the whole call; this caps the whole call. A late answer is ignored."""
+    def run(text: str) -> dict:
+        return _pool.submit(call, text).result(timeout=seconds)
+    return run
+
+
 def extract(text: str) -> dict:
     """Return {raw, engine, latency_ms, error}. Hosted open model, then the local one, then rules."""
     started = time.perf_counter()
@@ -183,7 +195,7 @@ def extract(text: str) -> dict:
     if config.AI_OFF:
         errors.append("AI turned off (BB_AI=off)")
     else:
-        tiers = ([(call_hosted, config.HOSTED_MODEL)] if config.HOSTED_ON else []) + [(call_llm, config.LLM_MODEL)]
+        tiers = ([(_with_deadline(call_hosted, config.HOSTED_TIMEOUT_S), config.HOSTED_MODEL)] if config.HOSTED_ON else []) + [(call_llm, config.LLM_MODEL)]
         for call, name in tiers:
             try:
                 raw = call(text)
