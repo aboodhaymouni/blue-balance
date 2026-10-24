@@ -51,9 +51,11 @@ class Store:
             self.db.commit()
             return cur.rowcount > 0
 
-    def set_segment_status(self, receipts: list[str], status: str) -> None:
+    def set_segment_status(self, receipts: list[str], status: str, reply_ar: str) -> None:
+        """Mark linked complaints and replace their reply, so the citizen sees the outcome on their receipt."""
         with self.lock:
-            self.db.executemany("UPDATE complaints SET segment_status = ? WHERE receipt = ?", [(status, r) for r in receipts])
+            self.db.executemany("UPDATE complaints SET segment_status = ?, reply_ar = ? WHERE receipt = ?",
+                                [(status, reply_ar, r) for r in receipts])
             self.db.commit()
 
     def incident_status(self, segment_id: str) -> str | None:

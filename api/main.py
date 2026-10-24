@@ -259,9 +259,9 @@ def _set_segment(segment_id: str, status: str, template) -> dict:
         raise HTTPException(404, "unknown segment")
     _, complaints = _window()
     linked = _linked(segment_id, complaints)
-    STORE.set_incident(segment_id, status, iso(now()))
-    STORE.set_segment_status([c["receipt"] for c in linked], status)
     text = template(NETWORK.name(segment_id))
+    STORE.set_incident(segment_id, status, iso(now()))
+    STORE.set_segment_status([c["receipt"] for c in linked], status, text)
     return {"segment_id": segment_id, "status": status, "replies": [{"receipt": c["receipt"], "text_ar": text} for c in linked]}
 
 

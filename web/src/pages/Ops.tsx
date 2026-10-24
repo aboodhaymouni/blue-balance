@@ -302,7 +302,7 @@ function IncidentCard({
     list.push(q.quote)
     quotesByZone.set(q.zone_id, list)
   }
-  const statusMeta = incident ? INCIDENT_STATUS_META[incident.status] : null
+  const statusMeta = incident ? (INCIDENT_STATUS_META[incident.status] ?? null) : null
 
   return (
     <section className="card flex flex-col gap-4 p-5" aria-label="الحادث">
