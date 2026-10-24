@@ -1,0 +1,31 @@
+{
+ "complaints_stored": 32,
+ "audio_files_on_disk": 0,
+ "stored_fields": [
+  "receipt",
+  "ts",
+  "channel",
+  "text_redacted",
+  "fields",
+  "zone_id",
+  "status",
+  "reply_ar",
+  "engine",
+  "segment_status"
+ ],
+ "not_stored": [
+  "audio",
+  "original text",
+  "names",
+  "phone numbers",
+  "plates",
+  "exact location",
+  "IP address",
+  "account"
+ ],
+ "outbound_hosts": [
+  "http://127.0.0.1:11434 (Ollama, same machine)",
+  "https://openrouter.ai/api/v1 (openai/gpt-oss-120b, masked text only)"
+ ],
+ "retention_days": 30
+}

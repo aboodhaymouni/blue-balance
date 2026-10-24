@@ -1,0 +1,47 @@
+{
+ "receipt": "BB-E497",
+ "ts": "2026-10-24T10:00:00+03:00",
+ "channel": "text",
+ "source": "live",
+ "text_redacted": "من امبارح ما في مي بالهاشمي الشمالي والجيران كمان، واليوم دورنا. انا [اسم] [هاتف]",
+ "fields": {
+  "issue": {
+   "value": "no_water",
+   "quote": "ما في مي"
+  },
+  "since": {
+   "value": "yesterday",
+   "quote": "من امبارح"
+  },
+  "turn_claim": {
+   "value": true,
+   "quote": "اليوم دورنا"
+  },
+  "neighbours_too": {
+   "value": true,
+   "quote": "الجيران كمان"
+  },
+  "tanker_seen": {
+   "value": null,
+   "quote": null
+  },
+  "place_phrase": {
+   "value": "الهاشمي الشمالي",
+   "quote": "الهاشمي الشمالي"
+  }
+ },
+ "dropped": [],
+ "pii_masked": 2,
+ "status": "anomaly",
+ "reply_ar": "وصلت شكواك (رقمها BB-E497). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+ "engine": "openai/gpt-oss-120b",
+ "latency_ms": 1851,
+ "segment_status": null,
+ "zone": {
+  "id": "Z05",
+  "name_ar": "الهاشمي الشمالي",
+  "match": "gazetteer"
+ },
+ "error": null,
+ "filled_by_rules": []
+}

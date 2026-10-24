@@ -1,0 +1,47 @@
+{
+ "receipt": "BB-7L5D",
+ "ts": "2026-10-24T10:00:01+03:00",
+ "channel": "text",
+ "source": "live",
+ "text_redacted": "ما في ولا نقطة مي عنا بجبل التاج من امبارح",
+ "fields": {
+  "issue": {
+   "value": "no_water",
+   "quote": "ما في ولا نقطة مي"
+  },
+  "since": {
+   "value": "yesterday",
+   "quote": "من امبارح"
+  },
+  "turn_claim": {
+   "value": null,
+   "quote": null
+  },
+  "neighbours_too": {
+   "value": null,
+   "quote": null
+  },
+  "tanker_seen": {
+   "value": null,
+   "quote": null
+  },
+  "place_phrase": {
+   "value": "جبل التاج",
+   "quote": "جبل التاج"
+  }
+ },
+ "dropped": [],
+ "pii_masked": 0,
+ "status": "explained",
+ "reply_ar": "وصلت شكواك (رقمها BB-7L5D). هاد مش عطل: منطقة جبل التاج مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 06:00 لـ 20:00.",
+ "engine": "openai/gpt-oss-120b",
+ "latency_ms": 1755,
+ "segment_status": null,
+ "zone": {
+  "id": "Z08",
+  "name_ar": "جبل التاج",
+  "match": "gazetteer"
+ },
+ "error": null,
+ "filled_by_rules": []
+}

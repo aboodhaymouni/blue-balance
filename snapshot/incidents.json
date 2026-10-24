@@ -1,0 +1,148 @@
+{
+ "window_hours": 6,
+ "demo_now": "2026-10-24T10:00:03+03:00",
+ "zones": {
+  "Z01": {
+   "anomalies": 0,
+   "explained": 0,
+   "in_turn": true,
+   "hit": false
+  },
+  "Z02": {
+   "anomalies": 0,
+   "explained": 0,
+   "in_turn": true,
+   "hit": false
+  },
+  "Z03": {
+   "anomalies": 0,
+   "explained": 0,
+   "in_turn": false,
+   "hit": false
+  },
+  "Z04": {
+   "anomalies": 3,
+   "explained": 0,
+   "in_turn": true,
+   "hit": true
+  },
+  "Z05": {
+   "anomalies": 9,
+   "explained": 0,
+   "in_turn": true,
+   "hit": true
+  },
+  "Z06": {
+   "anomalies": 3,
+   "explained": 0,
+   "in_turn": true,
+   "hit": true
+  },
+  "Z07": {
+   "anomalies": 1,
+   "explained": 0,
+   "in_turn": true,
+   "hit": false
+  },
+  "Z08": {
+   "anomalies": 0,
+   "explained": 5,
+   "in_turn": false,
+   "hit": false
+  },
+  "Z09": {
+   "anomalies": 0,
+   "explained": 4,
+   "in_turn": false,
+   "hit": false
+  },
+  "Z10": {
+   "anomalies": 0,
+   "explained": 3,
+   "in_turn": false,
+   "hit": false
+  }
+ },
+ "heatmap_top": {
+  "zone_id": "Z05",
+  "anomalies": 9
+ },
+ "hypotheses": [
+  {
+   "segment_id": "M2",
+   "name_ar": "الخط الرئيسي ٢",
+   "kind": "main",
+   "posterior": 0.9,
+   "zones": [
+    "Z04",
+    "Z05",
+    "Z06",
+    "Z07"
+   ]
+  },
+  {
+   "segment_id": "R1",
+   "name_ar": "الخزان التجريبي",
+   "kind": "reservoir",
+   "posterior": 0.04,
+   "zones": [
+    "Z01",
+    "Z02",
+    "Z03",
+    "Z04",
+    "Z05",
+    "Z06",
+    "Z07",
+    "Z08",
+    "Z09",
+    "Z10"
+   ]
+  },
+  {
+   "segment_id": "Z04",
+   "name_ar": "ماركا الشمالية",
+   "kind": "zone",
+   "posterior": 0.017,
+   "zones": [
+    "Z04"
+   ]
+  }
+ ],
+ "incident": {
+  "segment_id": "M2",
+  "name_ar": "الخط الرئيسي ٢",
+  "kind": "main",
+  "posterior": 0.9,
+  "status": "open",
+  "quotes": [
+   {
+    "zone_id": "Z04",
+    "quote": "ما في مي بسوق ماركا من الصبح، والجيران نفس الشي"
+   },
+   {
+    "zone_id": "Z04",
+    "quote": "الضغط ضعيف كثير قرب مطار ماركا، بالكاد بتعبي جالون"
+   },
+   {
+    "zone_id": "Z05",
+    "quote": "من امبارح ما في مي بالهاشمي الشمالي والجيران كمان، واليوم دورنا. انا [اسم] [هاتف]"
+   },
+   {
+    "zone_id": "Z05",
+    "quote": "لسا ما في مي بشارع البطحاء، صار ٣ ساعات"
+   },
+   {
+    "zone_id": "Z06",
+    "quote": "ما في مي عند مجمع الشمال وكل البنايات حوالينا"
+   },
+   {
+    "zone_id": "Z06",
+    "quote": "ضعيفة كثير المي باسكان طبربور، ما بتطلع ع السطح"
+   },
+   {
+    "zone_id": "Z07",
+    "quote": "المي ضعيفة شوي بحي النصر، مش كثير بس ملاحظين"
+   }
+  ]
+ }
+}
