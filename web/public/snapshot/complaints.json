@@ -1,0 +1,1481 @@
+[
+ {
+  "receipt": "BB-8Q7A",
+  "ts": "2026-10-24T10:00:04+03:00",
+  "channel": "text",
+  "source": "live",
+  "text_redacted": "ما في ولا نقطة مي عنا بجبل التاج من امبارح",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في ولا نقطة مي"
+   },
+   "since": {
+    "value": "yesterday",
+    "quote": "من امبارح"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": null,
+    "quote": null
+   }
+  },
+  "dropped": [
+   {
+    "field": "place_phrase",
+    "reason": "quote_not_found"
+   }
+  ],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-8Q7A). هاد مش عطل: منطقة جبل التاج مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 06:00 لـ 20:00.",
+  "engine": "qwen2.5:7b",
+  "latency_ms": 3265,
+  "segment_status": null,
+  "zone": {
+   "id": "Z08",
+   "name_ar": "جبل التاج",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-9W8D",
+  "ts": "2026-10-24T10:00:00+03:00",
+  "channel": "text",
+  "source": "live",
+  "text_redacted": "من امبارح ما في مي بالهاشمي الشمالي والجيران كمان، واليوم دورنا. انا [اسم] [هاتف]",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في مي"
+   },
+   "since": {
+    "value": "yesterday",
+    "quote": "من امبارح"
+   },
+   "turn_claim": {
+    "value": true,
+    "quote": "اليوم دورنا"
+   },
+   "neighbours_too": {
+    "value": true,
+    "quote": "والجيران كمان"
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بالهاشمي الشمالي",
+    "quote": "بالهاشمي الشمالي"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 2,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-9W8D). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b",
+  "latency_ms": 4292,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-H4A7",
+  "ts": "2026-10-24T09:54:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "لسا ما في مي بشارع البطحاء، صار ٣ ساعات",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في مي"
+   },
+   "since": {
+    "value": "two_three_days",
+    "quote": "صار ٣ ساعات"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بشارع البطحاء",
+    "quote": "بشارع البطحاء"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-H4A7). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3236,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-RSC8",
+  "ts": "2026-10-24T09:48:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "ولا نقطة مي عند دوار المحطة، كل الشارع هيك",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ولا نقطة"
+   },
+   "since": {
+    "value": "today",
+    "quote": "الشارع هيك"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": true,
+    "quote": "كل الشارع هيك"
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "دوار المحطة",
+    "quote": "دوار المحطة"
+   }
+  },
+  "dropped": [
+   {
+    "field": "issue",
+    "reason": "quote_not_found"
+   }
+  ],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-RSC8). هاد مش عطل: منطقة المحطة مش دورها هلأ. دوركم الجاي: يوم الاثنين من الساعة 06:00 لـ 20:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3256,
+  "segment_status": null,
+  "zone": {
+   "id": "Z10",
+   "name_ar": "المحطة",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-7NLF",
+  "ts": "2026-10-24T09:44:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "ما في مي عند مجمع الشمال وكل البنايات حوالينا",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في مي"
+   },
+   "since": {
+    "value": "today",
+    "quote": "عند مجمع الشمال"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": true,
+    "quote": "كل البنايات حوالينا"
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "مجمع الشمال",
+    "quote": "مجمع الشمال"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-7NLF). منطقة طبربور بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3235,
+  "segment_status": null,
+  "zone": {
+   "id": "Z06",
+   "name_ar": "طبربور",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-AGTZ",
+  "ts": "2026-10-24T09:36:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "المي بتنقط نقط بس، والخزانات فضيت. اليوم دورنا بالهاشمي",
+  "fields": {
+   "issue": {
+    "value": "weak_pressure",
+    "quote": "المي بتنقط نقط"
+   },
+   "since": {
+    "value": "today",
+    "quote": "اليوم"
+   },
+   "turn_claim": {
+    "value": true,
+    "quote": "اليوم دورنا بالهاشمي"
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بالهاشمي",
+    "quote": "بالهاشمي"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-AGTZ). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3300,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-NZ3Z",
+  "ts": "2026-10-24T09:30:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "ما في مي بسوق ماركا من الصبح، والجيران نفس الشي",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في مي"
+   },
+   "since": {
+    "value": "today",
+    "quote": "من الصبح"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": true,
+    "quote": "والجيران نفس الشي"
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "سوق ماركا",
+    "quote": "سوق ماركا"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-NZ3Z). منطقة ماركا الشمالية بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3218,
+  "segment_status": null,
+  "zone": {
+   "id": "Z04",
+   "name_ar": "ماركا الشمالية",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-FDHK",
+  "ts": "2026-10-24T09:23:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "صرلنا يومين بدون مي بجبل التاج، ايمتى بتيجي؟",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "صرلنا يومين بدون مي"
+   },
+   "since": {
+    "value": "two_three_days",
+    "quote": "صرلنا يومين"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بجبل التاج",
+    "quote": "بجبل التاج"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-FDHK). هاد مش عطل: منطقة جبل التاج مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 06:00 لـ 20:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3315,
+  "segment_status": null,
+  "zone": {
+   "id": "Z08",
+   "name_ar": "جبل التاج",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-3NR6",
+  "ts": "2026-10-24T09:20:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "يا جماعة المي راحت فجأة الساعة ٨ بالهاشمي الشمالي، شو القصة؟",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "المي راحت"
+   },
+   "since": {
+    "value": "today",
+    "quote": "الساعة ٨"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بالهاشمي الشمالي",
+    "quote": "بالهاشمي الشمالي"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-3NR6). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3265,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-WAFM",
+  "ts": "2026-10-24T09:12:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "المي ضعيفة شوي بحي النصر، مش كثير بس ملاحظين",
+  "fields": {
+   "issue": {
+    "value": "weak_pressure",
+    "quote": "المي ضعيفة شوي"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "حي النصر",
+    "quote": "حي النصر"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-WAFM). منطقة جبل النصر بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 2986,
+  "segment_status": null,
+  "zone": {
+   "id": "Z07",
+   "name_ar": "جبل النصر",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-BQDX",
+  "ts": "2026-10-24T09:03:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "no water عنا بسوق الهاشمي من الصبح، كل المحلات بتشتكي",
+  "fields": {
+   "issue": {
+    "value": null,
+    "quote": null
+   },
+   "since": {
+    "value": "today",
+    "quote": "من الصبح"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": true,
+    "quote": "كل المحلات بتشتكي"
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "سوق الهاشمي",
+    "quote": "سوق الهاشمي"
+   }
+  },
+  "dropped": [
+   {
+    "field": "issue",
+    "reason": "quote_not_found"
+   }
+  ],
+  "pii_masked": 0,
+  "status": "other",
+  "reply_ar": "وصلت شكواك (رقمها BB-BQDX) وتحوّلت للقسم المختص.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3294,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-R8KU",
+  "ts": "2026-10-24T09:00:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "حارتنا جنب مستشفى البشير ما فيها مي",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما فيها مي"
+   },
+   "since": {
+    "value": "today",
+    "quote": "جنب مستشفى البشير"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "حارتنا جنب مستشفى البشير",
+    "quote": "حارتنا جنب مستشفى البشير"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-R8KU). هاد مش عطل: منطقة الأشرفية مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 08:00 لـ 22:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3427,
+  "segment_status": null,
+  "zone": {
+   "id": "Z09",
+   "name_ar": "الأشرفية",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-2RT6",
+  "ts": "2026-10-24T08:54:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "ضعيفة كثير المي باسكان طبربور، ما بتطلع ع السطح",
+  "fields": {
+   "issue": {
+    "value": "weak_pressure",
+    "quote": "ضعيفة كثير المي باسكان طبربور، ما بتطلع ع السطح"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "باسكان طبربور",
+    "quote": "باسكان طبربور"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-2RT6). منطقة طبربور بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3362,
+  "segment_status": null,
+  "zone": {
+   "id": "Z06",
+   "name_ar": "طبربور",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-TNVF",
+  "ts": "2026-10-24T08:41:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "مش مقطوعة بس ضعيفة كثير، الهاشمي الشمالي، دورنا اليوم",
+  "fields": {
+   "issue": {
+    "value": "weak_pressure",
+    "quote": "مش مقطوعة بس ضعيفة كثير"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": true,
+    "quote": "دورنا اليوم"
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "الهاشمي الشمالي",
+    "quote": "الهاشمي الشمالي"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-TNVF). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3374,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-MK78",
+  "ts": "2026-10-24T08:39:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "no water عنا بحي المحطة من يومين",
+  "fields": {
+   "issue": {
+    "value": null,
+    "quote": null
+   },
+   "since": {
+    "value": "two_three_days",
+    "quote": "من يومين"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "حي المحطة",
+    "quote": "حي المحطة"
+   }
+  },
+  "dropped": [
+   {
+    "field": "issue",
+    "reason": "quote_not_found"
+   }
+  ],
+  "pii_masked": 0,
+  "status": "other",
+  "reply_ar": "وصلت شكواك (رقمها BB-MK78) وتحوّلت للقسم المختص.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3226,
+  "segment_status": null,
+  "zone": {
+   "id": "Z10",
+   "name_ar": "المحطة",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-73HJ",
+  "ts": "2026-10-24T08:30:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "الضغط ضعيف كثير قرب مطار ماركا، بالكاد بتعبي جالون",
+  "fields": {
+   "issue": {
+    "value": "weak_pressure",
+    "quote": "الضغط ضعيف"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "قرب مطار ماركا",
+    "quote": "قرب مطار ماركا"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-73HJ). منطقة ماركا الشمالية بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 5994,
+  "segment_status": null,
+  "zone": {
+   "id": "Z04",
+   "name_ar": "ماركا الشمالية",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-PYDS",
+  "ts": "2026-10-24T08:22:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "ما في ولا نقطة عند مستشفى الأمير حمزة والجيران كمان",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في ولا نقطة"
+   },
+   "since": {
+    "value": "today",
+    "quote": "عند مستشفى الأمير حمزة"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": true,
+    "quote": "والجيران كمان"
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "مستشفى الأمير حمزة",
+    "quote": "مستشفى الأمير حمزة"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-PYDS). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3470,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-R745",
+  "ts": "2026-10-24T08:17:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "ما اجت المي من يومين، جبل الأشرفية",
+  "fields": {
+   "issue": {
+    "value": "weak_pressure",
+    "quote": "من يومين"
+   },
+   "since": {
+    "value": "two_three_days",
+    "quote": "من يومين"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "جبل الأشرفية",
+    "quote": "جبل الأشرفية"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-R745). هاد مش عطل: منطقة الأشرفية مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 08:00 لـ 22:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3168,
+  "segment_status": null,
+  "zone": {
+   "id": "Z09",
+   "name_ar": "الأشرفية",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-UVNX",
+  "ts": "2026-10-24T08:08:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "المي لونها اصفر وفيها رمل، احنا قرب معبد هرقل",
+  "fields": {
+   "issue": {
+    "value": "dirty_water",
+    "quote": "لونها"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "قرب معبد هرقل",
+    "quote": "قرب معبد هرقل"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "other",
+  "reply_ar": "وصلت شكواك (رقمها BB-UVNX) وتحوّلت للقسم المختص.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3015,
+  "segment_status": null,
+  "zone": {
+   "id": "Z03",
+   "name_ar": "جبل القلعة",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-DXNH",
+  "ts": "2026-10-24T07:59:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "انا [اسم] من الهاشمي، دورنا اليوم والمي اجت شوي وقطعت",
+  "fields": {
+   "issue": {
+    "value": "cut_early",
+    "quote": "اجت شوي وقطعت"
+   },
+   "since": {
+    "value": "today",
+    "quote": "اليوم"
+   },
+   "turn_claim": {
+    "value": true,
+    "quote": "دورنا اليوم"
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": null,
+    "quote": null
+   }
+  },
+  "dropped": [],
+  "pii_masked": 1,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-DXNH). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3318,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-X8UP",
+  "ts": "2026-10-24T07:54:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "الخزان فضي وما في مي، احنا جنب دوار التاج",
+  "fields": {
+   "issue": {
+    "value": "weak_pressure",
+    "quote": "الخزان فضي"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "دوار التاج",
+    "quote": "دوار التاج"
+   }
+  },
+  "dropped": [
+   {
+    "field": "since",
+    "reason": "quote_not_found"
+   }
+  ],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-X8UP). هاد مش عطل: منطقة جبل التاج مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 06:00 لـ 20:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3108,
+  "segment_status": null,
+  "zone": {
+   "id": "Z08",
+   "name_ar": "جبل التاج",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-S9VU",
+  "ts": "2026-10-24T07:45:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "المي اجت ساعة وقطعت، مع انه اليوم [اسم] بطبربور",
+  "fields": {
+   "issue": {
+    "value": "cut_early",
+    "quote": "اجت ساعة وقطعت"
+   },
+   "since": {
+    "value": "today",
+    "quote": "اليوم"
+   },
+   "turn_claim": {
+    "value": true,
+    "quote": "اليوم [اسم] بطبربور"
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": null,
+    "quote": null
+   }
+  },
+  "dropped": [],
+  "pii_masked": 1,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-S9VU). منطقة طبربور بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3338,
+  "segment_status": null,
+  "zone": {
+   "id": "Z06",
+   "name_ar": "طبربور",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-ZKNT",
+  "ts": "2026-10-24T07:34:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "المي ضعيفة كثير وما بتطلع عالخزان، شارع البطحاء كله هيك",
+  "fields": {
+   "issue": {
+    "value": "weak_pressure",
+    "quote": "المي ضعيفة كثير وما بتطلع عالخزان"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": true,
+    "quote": "شارع البطحاء كله هيك"
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "شارع البطحاء كله هيك",
+    "quote": "شارع البطحاء كله هيك"
+   }
+  },
+  "dropped": [
+   {
+    "field": "since",
+    "reason": "no_quote"
+   }
+  ],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-ZKNT). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3608,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-89AL",
+  "ts": "2026-10-24T07:28:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "من امبارح المي مقطوعة قرب سكة الحديد",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "المي مقطوعة"
+   },
+   "since": {
+    "value": "yesterday",
+    "quote": "من امبارح"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "قرب سكة الحديد",
+    "quote": "قرب سكة الحديد"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-89AL). هاد مش عطل: منطقة المحطة مش دورها هلأ. دوركم الجاي: يوم الاثنين من الساعة 06:00 لـ 20:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3197,
+  "segment_status": null,
+  "zone": {
+   "id": "Z10",
+   "name_ar": "المحطة",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-3Z2Q",
+  "ts": "2026-10-24T07:22:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "اليوم دورنا بماركا الشمالية بس المي ما وصلت لهلأ",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما وصلت"
+   },
+   "since": {
+    "value": "today",
+    "quote": "اليوم"
+   },
+   "turn_claim": {
+    "value": true,
+    "quote": "دورنا بماركا الشمالية"
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بماركا الشمالية",
+    "quote": "بماركا الشمالية"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-3Z2Q). منطقة ماركا الشمالية بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3301,
+  "segment_status": null,
+  "zone": {
+   "id": "Z04",
+   "name_ar": "ماركا الشمالية",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-7KK5",
+  "ts": "2026-10-24T07:08:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "اليوم دورنا ومن الساعة ٧ ما في مي بالهاشمي الشمالي",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في مي"
+   },
+   "since": {
+    "value": "today",
+    "quote": "اليوم دورنا ومن الساعة ٧"
+   },
+   "turn_claim": {
+    "value": true,
+    "quote": "دورنا"
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بالهاشمي الشمالي",
+    "quote": "بالهاشمي الشمالي"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "anomaly",
+  "reply_ar": "وصلت شكواك (رقمها BB-7KK5). منطقة الهاشمي الشمالي بدورها هلأ، فعم نفحص إذا في عطل على الخط المغذّي إلها.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 4200,
+  "segment_status": null,
+  "zone": {
+   "id": "Z05",
+   "name_ar": "الهاشمي الشمالي",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-3W4L",
+  "ts": "2026-10-24T06:56:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "المي مقطوعة عنا تحت مسجد أبو درويش",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "مقطوعة"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "تحت مسجد أبو درويش",
+    "quote": "تحت مسجد أبو درويش"
+   }
+  },
+  "dropped": [
+   {
+    "field": "issue",
+    "reason": "quote_not_found"
+   },
+   {
+    "field": "since",
+    "reason": "quote_not_found"
+   }
+  ],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-3W4L). هاد مش عطل: منطقة الأشرفية مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 08:00 لـ 22:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3499,
+  "segment_status": null,
+  "zone": {
+   "id": "Z09",
+   "name_ar": "الأشرفية",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-HMQ3",
+  "ts": "2026-10-24T06:35:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "وين المي يا جماعة؟ التاج كله ناشف",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "وين المي"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "التاج",
+    "quote": "التاج"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-HMQ3). هاد مش عطل: منطقة جبل التاج مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 06:00 لـ 20:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3654,
+  "segment_status": null,
+  "zone": {
+   "id": "Z08",
+   "name_ar": "جبل التاج",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-XCSG",
+  "ts": "2026-10-24T06:12:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "ما في مي بالمحطة، شو القصة؟",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في مي"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بالمحطة",
+    "quote": "بالمحطة"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-XCSG). هاد مش عطل: منطقة المحطة مش دورها هلأ. دوركم الجاي: يوم الاثنين من الساعة 06:00 لـ 20:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 2860,
+  "segment_status": null,
+  "zone": {
+   "id": "Z10",
+   "name_ar": "المحطة",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-KY7X",
+  "ts": "2026-10-24T05:38:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "ما في مي بالأشرفية من امبارح والجيران كمان",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في مي"
+   },
+   "since": {
+    "value": "yesterday",
+    "quote": "من امبارح"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": true,
+    "quote": "والجيران كمان"
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بالأشرفية",
+    "quote": "بالأشرفية"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-KY7X). هاد مش عطل: منطقة الأشرفية مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 08:00 لـ 22:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3242,
+  "segment_status": null,
+  "zone": {
+   "id": "Z09",
+   "name_ar": "الأشرفية",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-AJFB",
+  "ts": "2026-10-24T05:30:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "الفاتورة هالشهر [اسم] ومش معقول، احنا بجبل الحسين",
+  "fields": {
+   "issue": {
+    "value": "billing",
+    "quote": "فاتورة"
+   },
+   "since": {
+    "value": null,
+    "quote": null
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بجبل الحسين",
+    "quote": "بجبل الحسين"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 1,
+  "status": "other",
+  "reply_ar": "وصلت شكواك (رقمها BB-AJFB) وتحوّلت للقسم المختص.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3252,
+  "segment_status": null,
+  "zone": {
+   "id": "Z02",
+   "name_ar": "جبل الحسين",
+   "match": "gazetteer"
+  }
+ },
+ {
+  "receipt": "BB-CYFP",
+  "ts": "2026-10-24T05:05:07+03:00",
+  "channel": "text",
+  "source": "replay",
+  "text_redacted": "ما في مي بجبل التاج من امبارح",
+  "fields": {
+   "issue": {
+    "value": "no_water",
+    "quote": "ما في مي"
+   },
+   "since": {
+    "value": "yesterday",
+    "quote": "من امبارح"
+   },
+   "turn_claim": {
+    "value": null,
+    "quote": null
+   },
+   "neighbours_too": {
+    "value": null,
+    "quote": null
+   },
+   "tanker_seen": {
+    "value": null,
+    "quote": null
+   },
+   "place_phrase": {
+    "value": "بجبل التاج",
+    "quote": "بجبل التاج"
+   }
+  },
+  "dropped": [],
+  "pii_masked": 0,
+  "status": "explained",
+  "reply_ar": "وصلت شكواك (رقمها BB-CYFP). هاد مش عطل: منطقة جبل التاج مش دورها هلأ. دوركم الجاي: يوم الأحد من الساعة 06:00 لـ 20:00.",
+  "engine": "qwen2.5:7b (replay)",
+  "latency_ms": 3313,
+  "segment_status": null,
+  "zone": {
+   "id": "Z08",
+   "name_ar": "جبل التاج",
+   "match": "gazetteer"
+  }
+ }
+]

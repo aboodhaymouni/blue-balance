@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 // Typed fetch helpers. Every request goes to this same origin under /api (Vite proxies it to FastAPI on :8000).
 // A module-level egress log counts every request the page makes, by host, so the UI can prove
 // "0 requests to third parties".
@@ -214,10 +215,44 @@ async function request<T>(path: string, opts: RequestOptions = {}): Promise<T> {
 }
 
 // ---------------------------------------------------------------------------------------------
+// Static demo (GitHub Pages): built with VITE_STATIC=1, it replays responses recorded from the
+// local stack (eval/snapshot.py). The open models only run on the laptop.
+// ---------------------------------------------------------------------------------------------
+
+export const STATIC_DEMO = import.meta.env.VITE_STATIC === '1'
+const OUT_OF_TURN_PLACES = ['جبل التاج', 'التاج', 'الأشرفية', 'المحطة', 'جبل القلعة', 'القلعة']
+
+async function snapshot<T>(name: string): Promise<T> {
+  recordEgress(`${import.meta.env.BASE_URL}snapshot/${name}.json`)
+  const res = await fetch(`${import.meta.env.BASE_URL}snapshot/${name}.json`, { cache: 'no-store' })
+  if (!res.ok) throw new ApiError(`ما لقينا النتيجة المسجّلة (${name})`, res.status, false)
+  return (await res.json()) as T
+}
+
+const staticApi = {
+  health: () => snapshot<Health>('health'),
+  network: () => snapshot<NetworkResponse>('network'),
+  transcribe: async (_audio: Blob, _filename: string): Promise<TranscribeResult> => {
+    throw new ApiError('التسجيل بالصوت بيشتغل بالنسخة المحلية بس (Whisper على اللابتوب). اكتب الشكوى أو جرّب الأمثلة.', 0, false)
+  },
+  createComplaint: (text: string, _channel: Channel) =>
+    snapshot<Complaint>(OUT_OF_TURN_PLACES.some((p) => text.includes(p)) ? 'complaint_explained' : 'complaint_anomaly'),
+  complaints: () => snapshot<Complaint[]>('complaints'),
+  deleteComplaint: async (_receipt: string) => ({ deleted: true }),
+  incidents: () => snapshot<Analysis>('incidents'),
+  approve: (_segment_id: string) => snapshot<SegmentActionResult>('approve'),
+  close: (_segment_id: string) => snapshot<SegmentActionResult>('close'),
+  replay: () => snapshot<ReplayResult>('replay'),
+  reset: async () => ({ ok: true }),
+  publicStats: () => snapshot<PublicResponse>('public'),
+  privacy: () => snapshot<PrivacyReport>('privacy'),
+}
+
+// ---------------------------------------------------------------------------------------------
 // Endpoints (CONTRACTS.md, "HTTP API")
 // ---------------------------------------------------------------------------------------------
 
-export const api = {
+const liveApi = {
   health: () => request<Health>('/api/health', { timeoutMs: 8000 }),
 
   network: () => request<NetworkResponse>('/api/network', { timeoutMs: 8000 }),
@@ -252,3 +287,5 @@ export const api = {
 
   privacy: () => request<PrivacyReport>('/api/privacy', { timeoutMs: 10000 }),
 }
+
+export const api: typeof liveApi = STATIC_DEMO ? staticApi : liveApi

@@ -12,6 +12,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   // node_modules may be a junction to another checkout; keep Vite's cache inside this project.
   cacheDir: '.vite',
+  // Relative asset paths, so the static build works under github.io/blue-balance/ as well as at the root.
+  base: './',
   // Pre-bundle in one pass so React is never duplicated between dependency chunks.
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-dom/client', 'react/jsx-runtime', 'lucide-react', 'clsx'],
